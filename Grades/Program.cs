@@ -10,15 +10,23 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            GradeBook book = new GradeBook();
-            book.AddGrade(91f);
-            book.AddGrade(89.5f);
-            book.AddGrade(75f);
+            GradeBook g1 = new GradeBook();
+            GradeBook g2 = g1;
 
-            GradeStatistics stats = book.ComputeStatistics();
-            Console.WriteLine(stats.AverageGrade);
-            Console.WriteLine(stats.LowestGrade);
-            Console.WriteLine(stats.HighestGrade);
+            g1 = new GradeBook();
+            g1.Name = "Scott's book";
+            
+            Console.WriteLine(g2.Name);
+
+            //GradeBook book = new GradeBook();
+            //book.AddGrade(91f);
+            //book.AddGrade(89.5f);
+            //book.AddGrade(75f);
+
+            //GradeStatistics stats = book.ComputeStatistics();
+            //Console.WriteLine(stats.AverageGrade);
+            //Console.WriteLine(stats.LowestGrade);
+            //Console.WriteLine(stats.HighestGrade);
         }
     }
 }
