@@ -22,12 +22,19 @@ namespace Grades
 
         static void Main(string[] args)
         {
+            string name1 = "Scott";
+            string name2 = "scott";
+
+            bool areEqual = name1.Equals(name2, StringComparison.CurrentCulture);
+            Console.WriteLine(areEqual);
+
             GradeBook g1 = new GradeBook();
             GradeBook g2 = g1;
 
             GiveBookAName( ref g2);
             Console.WriteLine(g2.Name);
 
+            DateTime d;
             int x1 = 10;
             IncrementNumber(ref x1);
             Console.WriteLine(x1);
