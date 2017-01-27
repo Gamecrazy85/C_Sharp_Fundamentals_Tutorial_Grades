@@ -22,8 +22,8 @@ namespace Grades
 
         static void Main(string[] args)
         {
-
-            Immutable();
+            Arrays();
+            //Immutable();
             //PassByValueAndRef();
 
             //GradeBook book = new GradeBook();
@@ -35,6 +35,25 @@ namespace Grades
             //Console.WriteLine(stats.AverageGrade);
             //Console.WriteLine(stats.LowestGrade);
             //Console.WriteLine(stats.HighestGrade);
+        }
+
+        private static void Arrays()
+        {
+            float[] grades = new float[3];
+
+            AddGrades(grades);
+
+            foreach (float grade in grades)
+            {
+                Console.WriteLine(grade);
+            }
+        }
+
+        private static void AddGrades(float[] grades)
+        {
+            grades[0] = 91f;
+            grades[1] = 89.1f;
+            grades[2] = 75f;
         }
 
         private static void Immutable()
