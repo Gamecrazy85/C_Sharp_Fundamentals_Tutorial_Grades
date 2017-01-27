@@ -25,7 +25,7 @@ namespace Grades
             string name1 = "Scott";
             string name2 = "scott";
 
-            bool areEqual = name1.Equals(name2, StringComparison.CurrentCulture);
+            bool areEqual = name1.Equals(name2, StringComparison.CurrentCultureIgnoreCase);
             Console.WriteLine(areEqual);
 
             GradeBook g1 = new GradeBook();
