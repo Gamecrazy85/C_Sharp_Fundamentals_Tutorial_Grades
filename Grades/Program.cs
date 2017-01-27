@@ -22,22 +22,9 @@ namespace Grades
 
         static void Main(string[] args)
         {
-            string name1 = "Scott";
-            string name2 = "scott";
 
-            bool areEqual = name1.Equals(name2, StringComparison.CurrentCultureIgnoreCase);
-            Console.WriteLine(areEqual);
-
-            GradeBook g1 = new GradeBook();
-            GradeBook g2 = g1;
-
-            GiveBookAName( ref g2);
-            Console.WriteLine(g2.Name);
-
-            DateTime d;
-            int x1 = 10;
-            IncrementNumber(ref x1);
-            Console.WriteLine(x1);
+            Immutable();
+            //PassByValueAndRef();
 
             //GradeBook book = new GradeBook();
             //book.AddGrade(91f);
@@ -48,6 +35,31 @@ namespace Grades
             //Console.WriteLine(stats.AverageGrade);
             //Console.WriteLine(stats.LowestGrade);
             //Console.WriteLine(stats.HighestGrade);
+        }
+
+        private static void Immutable()
+        {
+            string name = " Scott ";
+            name = name.Trim();
+
+            DateTime date = new DateTime(2014, 1, 1);
+            date = date.AddHours(25);
+
+            Console.WriteLine(date);
+            Console.WriteLine(name);
+        }
+
+        private static void PassByValueAndRef()
+        {
+            GradeBook g1 = new GradeBook();
+            GradeBook g2 = g1;
+
+            GiveBookAName(ref g2);
+            Console.WriteLine(g2.Name);
+
+            int x1 = 10;
+            IncrementNumber(ref x1);
+            Console.WriteLine(x1);
         }
     }
 }
